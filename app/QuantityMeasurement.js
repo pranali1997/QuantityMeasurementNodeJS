@@ -1,16 +1,18 @@
-
+var quantityJSON=require('../app/Quantities.json');
 module.exports = {
     unitMeasurement(unitType1, unitType2, unitValue) {
             var unitTypes = ["feet", "inch","yard"];
             var result, input = unitValue;
 
             if (unitTypes[0] == unitType1 && unitTypes[1] == unitType2) {
-                    result = 12 * input;
+                    result = quantityJSON.LENGTH.FEET*input;
+                    console.log(quantityJSON.LENGTH.FEET);
+                    
                 
                 return result;
             }
             if (unitTypes[1] == unitType1 && unitTypes[0] == unitType2) {
-                    result = parseFloat(input / 12);
+                    result = parseFloat(input / quantityJSON.LENGTH.FEET);
                 
                 return result;
             }
@@ -25,11 +27,11 @@ module.exports = {
                 return result;
             }
             if(unitType1==unitTypes[2] && unitType2==unitTypes[1]){
-                result=input*36;
+                result=input*quantityJSON.LENGTH.YARD;
                 return result;
             }
             if(unitType1==unitTypes[1] && unitType2==unitTypes[2]){
-                result=input/36;
+                result=input/quantityJSON.LENGTH.YARD;
                 return result;
             }
             else {
