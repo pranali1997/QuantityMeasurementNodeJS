@@ -1,47 +1,30 @@
 var quantityJSON=require('../app/Quantities.json');
+
+
+
 module.exports = {
     unitMeasurement(unitType1, unitType2, unitValue) {
-            var unitTypes = ["feet", "inch","yard","centimeter"];
             var result, input = unitValue;
 
-            if (unitTypes[0] == unitType1 && unitTypes[1] == unitType2) {
-                    result = quantityJSON.LENGTH.FEET*input;  
-                
-                return result;
-            }
-            if (unitTypes[1] == unitType1 && unitTypes[0] == unitType2) {
-                    result = parseFloat(input / quantityJSON.LENGTH.FEET);
-                
-                return result;
-            }
-            if(unitType1==unitTypes[0] && unitType2==unitTypes[2]){
-                    result=parseFloat(input/3);
-                
-                return result;
-            }
-            if(unitType1==unitTypes[2] && unitType2==unitTypes[0]){
-                result=input*3;
+            var keys=Object.keys(quantityJSON);
 
-                return result;
+            for(var i=0;i<keys.length;i++){
+                
+             if(keys[i]==unitType2){
+                var something=Object.keys(quantityJSON[keys[i]])
+                for(var j=0;j<something.length;j++){
+                    if(something[j]==unitType1){
+                        
+                        result=quantityJSON[keys[i]][something[j]]*input;
+                        var result1 = Math.round(result);
+                    }
+                }
             }
-            if(unitType1==unitTypes[2] && unitType2==unitTypes[1]){
-                result=input*quantityJSON.LENGTH.YARD;
-                return result;
-            }
-            if(unitType1==unitTypes[1] && unitType2==unitTypes[2]){
-                result=input/quantityJSON.LENGTH.YARD;
-                return result;
-            }
-            if(unitType1==unitTypes[1] && unitType2==unitTypes[3]){
-                result=input*quantityJSON.LENGTH.CENTIMETER;
-                return result;
-            }
-            else {
-                result = 1 * input;
-            }
-        
-        return result;
+            
+        }
 
+        return result1;
     }
 
-}
+    }
+    
