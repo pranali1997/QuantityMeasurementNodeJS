@@ -40,5 +40,8 @@ describe('QuantityMeasurement',function(){
     }),
     it('1 yard should be a equal to 3 feet',function(){
         assert.equal(3,quantityMeasure.unitMeasurement("yard","feet",1));
+    }),
+    it('2 inch should be equal to 5 centimeter',function(){
+        assert.equal(5,quantityMeasure.unitMeasurement("inch","centimeter",2));
     })
 })
