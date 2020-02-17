@@ -51,5 +51,13 @@
         "GRAM":1,
         "KILOGRAM":1000,
         "TONNE":1000000
+    },
+    "FAHRENHEIT":{
+        "FAHRENHEIT":1,
+        "CELSIUS":0.4716
+    },
+    "CELSIUS":{
+        "FAHRENHEIT":2.12,
+        "CELSIUS":1
     }
 }

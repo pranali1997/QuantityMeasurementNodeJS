@@ -54,6 +54,13 @@ describe('QuantityMeasurement',function(){
     }),
     it('1 tonne should be equal to 1000 kilogram',function(){
         assert.equal(1000,quantityMeasure.unitMeasurement("TONNE","KILOGRAM",1))
+    }),
+    it('212 fahrenheit should be equal to 100 celsius',function(){
+        assert.equal(212,quantityMeasure.unitMeasurement("FAHRENHEIT","CELSIUS",100))
+    }),
+    it('100 fahrenheit should be equal to 212 celsius',function(){
+        var celsiusValue=Math.round(quantityMeasure.unitMeasurement("CELSIUS","FAHRENHEIT",212));
+        assert.equal(100,celsiusValue)
     })
 
 })
