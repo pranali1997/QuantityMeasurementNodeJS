@@ -13,6 +13,12 @@ describe('Addition Of Two Units',function(){
     }),
     it('addition of 1 tonne and 1000 gram should return 1001 kilogram',function(){
         assert.equal(1001,unitAddition.additionOFMeasurement("TONNE",1,"GRAM",1000,"KILOGRAM"))
+    }),
+    it('addition of 1 yard and 1000 gram should return NotANumber',function(){
+        assert.isNaN(unitAddition.additionOFMeasurement("YARD",1,"GRAM",1000,"KILOGRAM"))
+    }),
+    it('addition of 1 fahrenheit and 1 litre should return NAN',function(){
+        assert.isNaN(unitAddition.additionOFMeasurement("FAHRENHEIT",1,"LITRE",1,"LITRE"))
     })
 
 })

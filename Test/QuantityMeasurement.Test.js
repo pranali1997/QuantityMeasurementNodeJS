@@ -38,7 +38,8 @@ describe('QuantityMeasurement',function(){
         assert.equal(36,quantityMeasure.unitMeasurement("YARD","INCH",1));
     })
     it('36 inch should not be a equal to 1 yard ',function(){
-        assert.equal(1.0000008,quantityMeasure.unitMeasurement("INCH","YARD",36));
+        var yardValue=Math.round(quantityMeasure.unitMeasurement("INCH","YARD",36));
+        assert.equal(1,yardValue);
     }),
     it('1 yard should be a equal to 3 feet',function(){
         assert.equal(3,quantityMeasure.unitMeasurement("YARD","FEET",1));
@@ -61,6 +62,18 @@ describe('QuantityMeasurement',function(){
     it('100 fahrenheit should be equal to 212 celsius',function(){
         var celsiusValue=Math.round(quantityMeasure.unitMeasurement("CELSIUS","FAHRENHEIT",212));
         assert.equal(100,celsiusValue)
+    }),
+    it('if feet value converted into kilogram should return undefined',function(){
+        assert.equal(undefined,quantityMeasure.unitMeasurement("FEET","KILOGRAM",1))
+    }),
+    it('if feet value converted into celsius should return undefined',function(){
+        assert.equal(undefined,quantityMeasure.unitMeasurement("FEET","CELSIUS",1))
+    }),
+    it('if gallon value converted into yard should return undefined',function(){
+        assert.equal(undefined,quantityMeasure.unitMeasurement("GALLON","YARD",1))
+    }),
+    it('if gram value converted into fahrenheit should return undefined',function(){
+        assert.equal(undefined,quantityMeasure.unitMeasurement("GRAM","FAHRENHEIT",1))
     })
 
 })
