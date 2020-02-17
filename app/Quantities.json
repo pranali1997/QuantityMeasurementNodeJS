@@ -40,5 +40,16 @@
         "GALLON":3785,
         "LITRE":1000,
         "MILLILITER":1
+    },
+    "KILOGRAM":
+    {
+        "GRAM":0.001,
+        "KILOGRAM":1,
+        "TONNE":1000
+    },
+    "GRAM":{
+        "GRAM":1,
+        "KILOGRAM":1000,
+        "TONNE":1000000
     }
 }

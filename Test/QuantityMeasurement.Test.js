@@ -48,6 +48,12 @@ describe('QuantityMeasurement',function(){
     }),
     it('1 gallon should be equal to 3.78 litres',function(){
         assert.equal(3.78,quantityMeasure.unitMeasurement("GALLON","LITRE",1));
+    }),
+    it('1 kilogram should be equal to 1000 grams',function(){
+        assert.equal(1000,quantityMeasure.unitMeasurement("KILOGRAM","GRAM",1))
+    }),
+    it('1 tonne should be equal to 1000 kilogram',function(){
+        assert.equal(1000,quantityMeasure.unitMeasurement("TONNE","KILOGRAM",1))
     })
 
 })
