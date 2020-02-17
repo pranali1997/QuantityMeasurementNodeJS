@@ -45,6 +45,9 @@ describe('QuantityMeasurement',function(){
     }),
     it('2 inch should be equal to 5 centimeter',function(){
         assert.equal(5,quantityMeasure.unitMeasurement("INCH","CENTIMETER",2));
+    }),
+    it('1 gallon should be equal to 3.78 litres',function(){
+        assert.equal(3.78,quantityMeasure.unitMeasurement("GALLON","LITRE",1));
     })
 
 })

@@ -25,5 +25,20 @@
         "INCH":2.5,
         "YARD":91.44,
         "CENTIMETER":1
+    },
+    "GALLON":{
+        "GALLON":1,
+        "LITRE":0.264172,
+        "MILLILITER":0.000264172
+    },
+    "LITRE":{
+        "GALLON":3.78,
+        "LITRE":1,
+        "MILLILITER":0.001   
+    },
+    "MILLILITER":{
+        "GALLON":3785,
+        "LITRE":1000,
+        "MILLILITER":1
     }
 }
