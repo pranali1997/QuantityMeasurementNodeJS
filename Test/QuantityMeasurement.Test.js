@@ -15,7 +15,7 @@ describe('QuantityMeasurement',function(){
         assert.isNotNaN(quantityMeasure.unitMeasurement("FEET","INCH",1));
     }),
     it('12 inch should be a equal to 1 feet',function(){
-        var feetValue=Math.round(quantityMeasure.unitMeasurement("INCH","FEET",12));
+        let feetValue=Math.round(quantityMeasure.unitMeasurement("INCH","FEET",12));
         assert.equal(1,feetValue);
     })
     it('1 inch should be a equal to 1 inch',function(){
@@ -25,7 +25,7 @@ describe('QuantityMeasurement',function(){
         assert.isDefined("defined",quantityMeasure.unitMeasurement("FEET","INCH",1));
     }),
     it('3 feet should be a equal to 1 yard',function(){
-        var yardValue=Math.round(quantityMeasure.unitMeasurement("FEET","YARD",3));
+        let yardValue=Math.round(quantityMeasure.unitMeasurement("FEET","YARD",3));
         assert.equal(1,yardValue);
     }),
     it('1 feet should not be a equal to 1 yard',function(){
@@ -38,7 +38,7 @@ describe('QuantityMeasurement',function(){
         assert.equal(36,quantityMeasure.unitMeasurement("YARD","INCH",1));
     })
     it('36 inch should not be a equal to 1 yard ',function(){
-        var yardValue=Math.round(quantityMeasure.unitMeasurement("INCH","YARD",36));
+        let yardValue=Math.round(quantityMeasure.unitMeasurement("INCH","YARD",36));
         assert.equal(1,yardValue);
     }),
     it('1 yard should be a equal to 3 feet',function(){
@@ -60,7 +60,7 @@ describe('QuantityMeasurement',function(){
         assert.equal(212,quantityMeasure.unitMeasurement("FAHRENHEIT","CELSIUS",100))
     }),
     it('100 fahrenheit should be equal to 212 celsius',function(){
-        var celsiusValue=Math.round(quantityMeasure.unitMeasurement("CELSIUS","FAHRENHEIT",212));
+        let celsiusValue=Math.round(quantityMeasure.unitMeasurement("CELSIUS","FAHRENHEIT",212));
         assert.equal(100,celsiusValue)
     }),
     it('if feet value converted into kilogram should return undefined',function(){
