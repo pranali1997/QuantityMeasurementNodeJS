@@ -1,5 +1,5 @@
 const assert=require('chai').assert;
-const unitAddition=require('../app/QuantityMeasurement.js');
+const unitAddition=require('../app/UnitsAddition');
 
 describe('Addition Of Two Units',function(){
     it('addition of inch and inch should be in inch',function(){
