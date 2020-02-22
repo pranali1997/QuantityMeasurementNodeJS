@@ -1,15 +1,14 @@
 module.exports = {
 
     quantityJson() {
-
-     [{
+       var measure= [{
             "INCH":
             {
                 "FEET": 12,
                 "INCH": 1,
                 "YARD": 36,
                 "CENTIMETER": 0.393701
-            },  
+            },
             "FEET":
             {
                 "FEET": 1,
@@ -65,6 +64,6 @@ module.exports = {
                 "CELSIUS": 1
             }
         }]
+        return measure;
     }
-
 }

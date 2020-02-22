@@ -1,4 +1,4 @@
-var quantityMeasurement=require('../app/QuantityMeasurement');
+var quantityMeasurement=require('./QuantityMeasurementService');
 
 module.exports={
     additionOFMeasurement(unitType1, unitValue1, unitType2, unitValue2, unitType3) {
